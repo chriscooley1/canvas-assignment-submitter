@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-
+from typing import Optional
 
 class Course(BaseModel):
     course_id: int
@@ -9,3 +9,4 @@ class Course(BaseModel):
 class Assignment(BaseModel):
     assignment_id: int
     name: str
+    description: Optional[str] = None
